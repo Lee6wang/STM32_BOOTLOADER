@@ -5,6 +5,7 @@
   </component>
   <component name="BackendCodeEditorMiscSettings">
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -34,11 +35,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9c76a96-cfd2-417e-a858-33f3a1e4eedf" name="更改" comment="Add a README for this project">
+    <list default="true" id="c9c76a96-cfd2-417e-a858-33f3a1e4eedf" name="更改" comment="Update">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BOOTL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BOOTL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardWare/Inc/FlashCV.h" beforeDir="false" afterPath="$PROJECT_DIR$/HardWare/Inc/FlashCV.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardWare/Src/Bootloader.c" beforeDir="false" afterPath="$PROJECT_DIR$/HardWare/Src/Bootloader.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HardWare/Src/FlashCV.c" beforeDir="false" afterPath="$PROJECT_DIR$/HardWare/Src/FlashCV.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +58,12 @@
         <option value="07_point &lt;2210526012@qq.com&gt;" />
       </list>
     </option>
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -64,12 +72,18 @@
     "assignee": "Lee6wang"
   }
 }]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lee6wang/STM32_BOOTLOADER.git",
-    "accountId": "2de9fa14-7595-440f-82f7-8ae41f733581"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Lee6wang/STM32_BOOTLOADER.git&quot;,
+    &quot;accountId&quot;: &quot;2de9fa14-7595-440f-82f7-8ae41f733581&quot;
   }
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Core/Src/main.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HardWare/Inc/FlashCV.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HardWare/Src/Bootloader.c" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/HardWare/Src/FlashCV.c" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2025" />
@@ -86,14 +100,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "CMake 应用程序.BOOTL.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "OpenOCD 下载并运行.CMSIS_DAP.executor": "Run",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "master",
@@ -113,6 +130,11 @@
   </component>
   <component name="RunManager" selected="CMake 应用程序.BOOTL">
     <configuration name="BOOTL" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BOOTL" TARGET_NAME="BOOTL" CONFIG_NAME="Debug-STM32" RUN_TARGET_PROJECT_NAME="BOOTL" RUN_TARGET_NAME="BOOTL">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -150,7 +172,13 @@
       <workItem from="1763690037951" duration="1316000" />
       <workItem from="1763713904436" duration="8000" />
       <workItem from="1763723731384" duration="622000" />
-      <workItem from="1763730617813" duration="5285000" />
+      <workItem from="1763730617813" duration="5687000" />
+      <workItem from="1763736331981" duration="142000" />
+      <workItem from="1763736496573" duration="245000" />
+      <workItem from="1763736752220" duration="38000" />
+      <workItem from="1763736827041" duration="133000" />
+      <workItem from="1763736962713" duration="15000" />
+      <workItem from="1763736988635" duration="523000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交BOOT">
       <option name="closed" value="true" />
@@ -176,7 +204,23 @@
       <option name="project" value="LOCAL" />
       <updated>1763731845957</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update">
+      <option name="closed" value="true" />
+      <created>1763735964962</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763735964962</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update">
+      <option name="closed" value="true" />
+      <created>1763736013833</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763736013833</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +257,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交BOOT" />
     <MESSAGE value="Add a README for this project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add a README for this project" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
