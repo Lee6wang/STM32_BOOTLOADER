@@ -10,7 +10,7 @@
 #define FLASH_APP_START_ADDR       0x08008000UL      // 扇区2~4给App
 #define FLASH_APP_END_ADDR         0x0801FFFFUL
 
-#define FLASH_META_ADDR            0x08010000UL      // 扇区4起始，用一小块存元信息
+#define FLASH_META_ADDR            0x08007F00UL      // 扇区1结尾，256字节存储元数据
 #define FLASH_DOWNLOAD_START_ADDR  0x08020000UL      // 扇区5~6作为下载区
 #define FLASH_DOWNLOAD_END_ADDR    0x0805FFFFUL
 
@@ -24,8 +24,8 @@ typedef struct
 {
     uint32_t flag;         // 升级标志
     uint32_t image_size;   // 新固件实际字节数
-    uint32_t image_crc;    // 新固件CRC（应用算好写进来）
-    uint32_t version;      // 固件版本号（可选）
+    uint32_t image_crc;    // CRC32
+    uint32_t version;      // 固件版本号
     uint32_t reserved[4];  // 预留
 } BootMeta_t;
 
@@ -42,7 +42,7 @@ HAL_StatusTypeDef FlashCV_EraseAppArea(void);
 // 将下载区固件搬运到 App 区
 HAL_StatusTypeDef FlashCV_CopyImageToApp(uint32_t img_size);
 
-// 计算某段Flash的“CRC”（这里先用简单示例，后面可换硬件CRC）
+// 计算某段Flash的“CRC”，采用CRC32算法
 uint32_t FlashCV_CalcCRC(uint32_t start_addr, uint32_t length);
 
 #endif /* __FLASH_CV_H */

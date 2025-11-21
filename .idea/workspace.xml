@@ -34,7 +34,13 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9c76a96-cfd2-417e-a858-33f3a1e4eedf" name="更改" comment="第一次提交BOOT" />
+    <list default="true" id="c9c76a96-cfd2-417e-a858-33f3a1e4eedf" name="更改" comment="Add a README for this project">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardWare/Inc/FlashCV.h" beforeDir="false" afterPath="$PROJECT_DIR$/HardWare/Inc/FlashCV.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardWare/Src/Bootloader.c" beforeDir="false" afterPath="$PROJECT_DIR$/HardWare/Src/Bootloader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HardWare/Src/FlashCV.c" beforeDir="false" afterPath="$PROJECT_DIR$/HardWare/Src/FlashCV.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +66,7 @@
 }]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/Lee6wang/STM32_APP_BOOTLOADER.git",
+    "url": "https://github.com/Lee6wang/STM32_BOOTLOADER.git",
     "accountId": "2de9fa14-7595-440f-82f7-8ae41f733581"
   }
 }]]></component>
@@ -144,7 +150,7 @@
       <workItem from="1763690037951" duration="1316000" />
       <workItem from="1763713904436" duration="8000" />
       <workItem from="1763723731384" duration="622000" />
-      <workItem from="1763730617813" duration="903000" />
+      <workItem from="1763730617813" duration="5285000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交BOOT">
       <option name="closed" value="true" />
@@ -162,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763731339615</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add a README for this project">
+      <option name="closed" value="true" />
+      <created>1763731845957</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763731845957</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +212,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交BOOT" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次提交BOOT" />
+    <MESSAGE value="Add a README for this project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add a README for this project" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,5 @@
 #include "Bootloader.h"
+#include "gpio.h"
 
 /********* 内部函数声明 *********/
 static void Bootloader_CheckAndUpgrade(void);
@@ -7,8 +8,6 @@ static void Bootloader_JumpToApp(void);
 /********* 对外主入口 *********/
 void Bootloader_Run(void)
 {
-    // 此处假设 SystemClock_Config() 和 HAL_Init() 已经在 main.c 里完成
-    // 如果你想，也可以在这里再做一些指示灯/日志输出
 
     Bootloader_CheckAndUpgrade();
     Bootloader_JumpToApp();
@@ -17,6 +16,8 @@ void Bootloader_Run(void)
     while (1)
     {
         // 错误处理：比如闪灯、等待调试
+        HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+        HAL_Delay(500);
     }
 }
 
@@ -54,7 +55,7 @@ static void Bootloader_CheckAndUpgrade(void)
         return;
     }
 
-    // （可选）再对App区做一次CRC校验
+    // 再对App区做一次CRC校验
     crc_calc = FlashCV_CalcCRC(FLASH_APP_START_ADDR, meta.image_size);
     if (crc_calc != meta.image_crc)
     {
@@ -75,18 +76,20 @@ static void Bootloader_JumpToApp(void)
     uint32_t appResetHandler = *(uint32_t *)(FLASH_APP_START_ADDR + 4);
 
     // 简单检查栈顶地址是否在 SRAM 范围
-    if ((appStack & 0x2FFE0000) != 0x20000000)
+    if (appStack < 0x20000000 || appStack > 0x20020000)
     {
         // 说明应用不存在或未正确烧录
         while (1)
         {
-            // TODO: 这里可以闪灯报错或等待调试
+            HAL_GPIO_TogglePin(LED_GPIO_Port, LED_Pin);
+            HAL_Delay(100);
         }
     }
 
     __disable_irq();
 
-    // 如有需要，这里可以关闭外设、清中断挂起等
+    HAL_RCC_DeInit();
+    HAL_GPIO_DeInit(LED_GPIO_Port,LED_Pin);
 
     // 重定位中断向量表
     SCB->VTOR = FLASH_APP_START_ADDR;
